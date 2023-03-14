@@ -30,6 +30,10 @@ route.get('/user', (req, res) => {
     user.fetchUsers(req, res);
 });
 
+route.get('/user/:id', (req, res) => {
+    user.fetchUser(req, res);
+});
+
 route.delete('/user/:id', (req, res) => {
     user.deleteUser(req, res);
 });
