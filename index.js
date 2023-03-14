@@ -4,7 +4,7 @@ const route = require('./controller');
 
 const cors = require('cors');
 
-const port = parseInt(process.env.PORT) || 4000;
+const port = parseInt(process.env.PORT) || 4040;
 
 const app = express();
 
