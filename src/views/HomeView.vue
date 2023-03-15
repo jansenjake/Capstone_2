@@ -1,18 +1,21 @@
 <template>
-  <HelloWorld />
+  <div>
+    <h1>Jake Jansen</h1>
+    <div>
+      
+    </div>
+  </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+export default {
+  name: 'HomeView'
+}
 
-// Components
-import HelloWorld from '../components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'HomeView',
-
-  components: {
-    HelloWorld,
-  },
-});
 </script>
+
+<style>
+
+
+
+</style>
