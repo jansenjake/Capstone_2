@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <h1>Jake Jansen</h1>
-    <div>
-      
-    </div>
+  <div class="home">
+    <h1>Home</h1>
+
   </div>
 </template>
 
@@ -16,6 +14,9 @@ export default {
 
 <style>
 
-
+.home {
+margin: auto;
+padding: 100px 100px;
+}
 
 </style>

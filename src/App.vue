@@ -1,32 +1,29 @@
 <template>
-
-<div>
-  <Navbar/>
-  <Products/>
-  <AboutView/>
-  <FooterComp/>
-</div>
-
+  <Navbar />
+  <router-view />
+  <FooterComp />
 </template>
 
 <script>
-import Navbar from './components/Navbar'
-import AboutView from './views/AboutView.vue';
-import Products from './components/Products.vue';
+import Navbar from './components/Navbar.vue'
 import FooterComp from './components/FooterComp.vue';
 
 export default {
   name: 'App',
-  components: { Navbar, Products, AboutView , FooterComp }
+  components: { Navbar, FooterComp }
 }
 
 </script>
 
 
 <style>
-
-body{
+body {
+  height: 100vh;
   background-image: linear-gradient(grey, white, black);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 </style>
