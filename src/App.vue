@@ -17,12 +17,12 @@ export default {
 
 
 <style>
-body {
+/* body {
   height: 100vh;
   background-image: linear-gradient(grey, white, black);
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 
 

@@ -36,6 +36,21 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: () => import('../views/AdminView.vue')
+  },
+  {
+    path: '/checkout',
+    name: 'CheckoutView',
+    component: () => import('../views/CheckoutView.vue')
+  },
+  {
+    path: '/login',
+    name: 'loginView',  
+    component: () => import('../views/loginView.vue')
+  },
+  {
+    path: '/registerView',
+    name: 'registerView',  
+    component: () => import('../views/registerView.vue')
   }
 ]
 

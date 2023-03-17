@@ -1,9 +1,8 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand text-dark" href=""> <img class="logo" src="../assets/logo2.png"
-            alt="logo"> </a>
+        <a class="navbar-brand text-dark" href=""> <img class="logo" src="../assets/logo2.png" alt="logo"> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
@@ -46,6 +45,9 @@
                   <li>
                     <router-link to="/admin" class="route-link">Admin</router-link>
                   </li>
+                  <li>
+                    <router-link to="/login" class="route-link">Login</router-link>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -53,8 +55,6 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn text-light" type="submit">Search</button>
             </form>
-
-            
           </div>
         </div>
       </div>
@@ -103,6 +103,10 @@ export default {
   }
 }
 
+nav a{
+  text-decoration: none;
+}
+
 .nav-item {
   padding: 9px;
 }
@@ -117,17 +121,20 @@ export default {
   background-color: #000;
   padding: 9px;
   border-radius: 10px;
-  
+
 }
 
-.route-link{
+.route-link {
   display: block;
   color: white;
   text-align: center;
 }
 
-.dropdown-menu:hover{
+.dropdown-menu:hover {
   transition: ease 0.3s;
   border-radius: 15px;
 }
+
+
+
 </style>
