@@ -1,9 +1,9 @@
 <template>
   <div>
-    <nav class="navbar navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-light bg-dark sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand text-dark" href=""> <img class="logo" src="../assets/logo2.png" alt="logo"> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>

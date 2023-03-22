@@ -16,7 +16,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ item.prodName }}</h5>
               <p class="card-text">R {{ item.price }}</p>
-              <button class="cartBtn">Add to cart</button>
+              <button class="cartBtn"><a href="#">Add to cart</a></button>
             </div>
           </div>
         </div>
@@ -97,7 +97,18 @@ export default {
   box-shadow: 5px 6px darkslategray;
 }
 
+.prod {
+  background-color: darkslategray;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
 
+
+
+button a{
+  text-decoration: none;
+  color: white;
+}
 
 </style>
 

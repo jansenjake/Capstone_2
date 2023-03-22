@@ -3,7 +3,7 @@
         <form class="log">
             <h2>Login</h2>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" >
             <label for="username">Username</label>
             <input type="text" id="username" name="username">
             <label for="password">Password</label>
