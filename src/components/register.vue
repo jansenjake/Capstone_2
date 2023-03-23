@@ -15,22 +15,37 @@
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
-
-      <!-- <input type="text" id="male/female" name="gender" required> -->
-
-      <!-- <input type="radio" id="male" name="gender" value="male" required>
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female">Female</label> -->
-      <br><br>
+      <br>
+      <br>
       <input type="submit" value="Submit">
     </form>
   </div>
 </template>
 
 <script>
+
+import { useStore } from 'vuex';
+import { useRouter } from 'vue-router';
+import {ref} from 'vue';
 export default {
-  name: 'register'
+  name: 'register',
+  setup (){
+    let store = useStore();
+    let router = useRouter();
+    let spinner = ref(false);
+
+    const payload = {
+      firstName: '',
+      lastName: '',
+      emailAdd: '',
+      userPass: '',
+      gender: ''
+    };
+    async function register(payload){
+      spinner.value = !spinner.value
+      store.dispatch('register')
+    }
+  }
 }
 </script>
 
