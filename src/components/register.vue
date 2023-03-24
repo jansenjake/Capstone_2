@@ -1,23 +1,23 @@
 <template>
   <div>
-    <form>
+    <form class="text-white" >
       <h1>Register</h1>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+      <label for="exampleInputFirstName">Name</label>
+      <input type="text" id="name" v-model="payload.firstName" name="name" required autocomplete="off">
       <label for="surname">Surname</label>
-      <input type="text" id="surname" name="surname" required>
+      <input type="text" id="surname" v-model="payload.lastName" name="surname" required autocomplete="off">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
+      <input type="email" id="email" v-model="payload.emailAdd" name="email" required autocomplete="off">
+      <label for="exampleInputPassword">Password</label>
+      <input type="password" id="password" v-model="payload.userPass" name="password" required autocomplete="off">
       <label class="gender" for="gender">Gender</label>
-      <select class="drop" name="gender" id="gender">
+      <select class="drop" name="gender" id="gender" v-model="payload.gender">
         <option value="Male">Male</option>
         <option value="Female">Female</option>
       </select>
       <br>
       <br>
-      <input type="submit" value="Submit">
+      <input type="submit" v-on:click="($event) => 'register'(payload)" value="Submit">
     </form>
   </div>
 </template>
@@ -43,13 +43,19 @@ export default {
     };
     async function register(payload){
       spinner.value = !spinner.value
-      store.dispatch('register')
+      await store.dispatch('register', payload);
+      router.push({name: 'home', path: '/'})
+      .then(()=>location.reload);
+    }
+    return{
+      register,
+      payload
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 body {
 
   color: #fff;
@@ -88,9 +94,6 @@ input[type="password"] {
   font-size: 16px;
 }
 
-/* input[type="radio"] {
-      margin-right: 10px;
-    } */
 
 input {
   background-color: darkslategrey;

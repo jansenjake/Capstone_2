@@ -10,7 +10,8 @@ export default createStore({
     user: null,
     users: null,
     jwToken: null,
-    msg: null
+    msg: null,
+    spinner: true
 
   },
   getters: {
@@ -30,6 +31,9 @@ export default createStore({
     },
     setMsg: (state, msg) => {
       state.msg = msg
+    },
+    setSpinner: (state, spinner) => {
+      state.spinner = spinner
     }
 
   },  

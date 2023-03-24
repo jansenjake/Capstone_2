@@ -1,14 +1,14 @@
 <template>
-
-<About/>
-
+    <div>
+<cart/>
+    </div>
 </template>
 
 <script>
-import About from '../components/About.vue'
+import cart from '../components/cart.vue'
     export default {
         components: {
-            About
+            cart
         }
     }
 </script>

@@ -4,37 +4,28 @@
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" v-model="payload.emailAdd"
-          aria-describedby="emailHelp">
+          aria-describedby="emailHelp" autocomplete="off">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" v-model="payload.userPass">
+        <input type="password" class="form-control" id="exampleInputPassword1" v-model="payload.userPass" autocomplete="off">
       </div>
       <p>Don't have an account? <a href="/registerView">Register here</a></p>
       <button id="btnSub" type="submit" class="btn btn-primary" v-on:click="login(payload)">Submit</button>
     </form>
   </div>
 
-  <!-- <form class="log">
-            <h2>Login</h2>
-            <label for="email">Email</label>
-            <input type="email" id="email" v-model="payload.emailAdd" name="email" >
-            <label for="password">Password</label>
-            <input type="password" id="password" v-model="payload.userPass" name="password"/>
-            <input class="submit" type="submit" v-on:click="login(payload)" value="Login">
-          <p>Don't have an account? <a href="/registerView">Register here</a></p> 
-        </form> -->
 </template>
 
 <script>
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
-// import { Ref } from 'vue';
+import { ref } from 'vue';
 export default {
-  // name: 'login',
+  name: 'login',
   setup() {
     let store = useStore();
-    // let spinner = ref(false);
+    let spinner = ref(false);
     let router = useRouter();
 
     const payload = {
@@ -42,20 +33,19 @@ export default {
       userPass: ''
     };
     async function login(payload) {
-      // spinner.value = !spinner.value;
+      spinner.value = !spinner.value;
       let loginPayload = {
         'emailAdd': payload.emailAdd,
         'userPass': payload.userPass
       };
       await store.dispatch('login', loginPayload);
       localStorage.setItem('user', JSON.stringify(await store.state.user));
-      // spinner.value = !spinner.value;
+      spinner.value = !spinner.value;
       router.push({ name: 'home', path: '/' })
         .then(() => location.reload());
     }
     return {
       login,
-      // spinner,
       payload
     }
   }
@@ -64,7 +54,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .log {
   margin: 50px auto;
   width: 500px;

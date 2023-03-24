@@ -48,6 +48,9 @@
                   <li>
                     <router-link to="/login" class="route-link">Login</router-link>
                   </li>
+                  <li>
+                    <router-link to="/cart" class="route-link">Cart</router-link>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -72,7 +75,7 @@ export default {
 
 
   
-<style>
+<style scoped>
 .offcanvas {
   background-color: darkslategrey;
 }

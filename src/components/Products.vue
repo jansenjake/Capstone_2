@@ -9,14 +9,13 @@
               <img
                 :src="item.imgUrl"
                 class="card-img-top"
-                alt="..."
-                style=" max-width: 30rem"
+                alt="img"
               />
             </div>
             <div class="card-body">
               <h5 class="card-title">{{ item.prodName }}</h5>
               <p class="card-text">R {{ item.price }}</p>
-              <button class="cartBtn"><a href="#">Add to cart</a></button>
+              <button class="cartBtn"><a href="../components/cart.vue">Add to cart</a></button>
             </div>
           </div>
         </div>
@@ -57,7 +56,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .card {
   width: 20rem;
   height: fit-content;
@@ -108,6 +107,10 @@ export default {
 button a{
   text-decoration: none;
   color: white;
+}
+
+img{
+  width: 150px;
 }
 
 </style>

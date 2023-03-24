@@ -18,8 +18,7 @@ export default {
 </script>
 
 <style>
-#foot{
-  text-align: center;
-}
+
+
 
 </style>
