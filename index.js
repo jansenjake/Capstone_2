@@ -14,7 +14,7 @@ const cookieParser = require('cookie-parser');
 
 
 app.use((req, res, next) =>{
-    res.header("Access-Control-Allow-Origin", "http://localhost:8080");
+    res.header("Access-Control-Allow-Origin", "buy-time-fde71.web.app");
     res.header("Access-Control-Allow-Headers", "*");
     res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
     req.header("Access-Control-Allow-Credentials", "true");
